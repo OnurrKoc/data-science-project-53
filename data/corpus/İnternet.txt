@@ -1,0 +1,17 @@
+İnternet, bilgisayar sistemlerini birbirine bağlayan elektronik iletişim ağıdır. TDK, internet sözcüğüne karşılık olarak genel ağı önermiştir. İnternet yerine zaman zaman sadece net sözcüğü de kullanılır.
+İnternet, çok protokollü bir ağ olup birbirine bağlı bilgisayar ağlarının tümü olarak da tanımlanabilir. Binlerce akademik ve ticari ağ ile devlet ve serbest bilgisayar ağının birbirine bağlanmasıyla oluşmuştur. Bilgisayarlar arasında bilgi çeşitli protokollere göre paketler hâlinde transfer edilir. İnternet üzerinde elektronik posta ve birbirine bağlı sayfalar gibi çok çeşitli bilgiler ve hizmetler vardır. İnternet üzerinden oyunlar da oynanabilir.
+İnternetin kökeni, hataya dayanıklı, sağlam ve özel bir bilgisayar ağı kurmak isteyen Amerika Birleşik Devletleri hükûmeti tarafından 1960 yılındaki araştırmalara dayanır. 1980'lerde Ulusal Bilim Vakfı tarafından yeni bir ABD omurgasının finansmanı için toplanan özel fonlar, dünya çapında katılım ve birçok özel ağın birleşmesine neden olmuştur. 1990'larda uluslararası bir ağın yaygınlaşması ile internet, modern insan hayatının temelinde yer almıştır.
+
+
+== Etimoloji ==
+1985 yılında kullanılmaya başlayan İngilizce internet kelimesi, "kendi aralarında bağlantılı ağlar" anlamına gelen Interconnected Networks teriminin kısaltmasıdır. Ön ek olan inter-, İngilizcede arasında ve karşılıklı anlamlarına gelir. Net kelimesi ise ağ anlamına gelir.
+Zaman zaman internet kelimesi yerine kullanılan "WWW" kısaltması ise World Wide Web (Dünya Çapında Ağ) sözcüklerinin akronimidir ve internet ile eş anlamlı değildir.
+
+
+=== Yazılışı ===
+İnternet, belirli ve tek bir iletişim ağının adı olduğu için özel isimdir. Özel isimlerin büyük harfle yazılması gerektiği kuralına dayanarak büyük harfle yazılmalıdır. Ancak bunun dışında, özel isimler, anlamı dışında kullanıldığı zaman küçük harfle yazılabilir. Örneğin: "Güneş'e en yakın gezegen Merkür'dür" cümlesinde Güneş büyük harfle yazılırken "Bu odaya hiç güneş girmiyor" cümlesinde "güneş" özel isim anlamı yerine "güneş ışığı" anlamında kullanıldığından küçük harfle yazılır. Buna benzer olarak "İnternet" de bazen anlamı dışında, örneğin "Evimde internet yok", "İnternet hızım düşük" gibi bir cümlelerde "internet bağlantısı" anlamında kullanılabilir ve özel isimlerin yazım kuralı gereği bu kullanımlar bağlamında küçük harfle yazılabilir. İnternet'in yaygınlaşmasıyla, özel isim olan temel anlamı dışındaki yan anlamlar da yaygınlaşmış, Türk Dil Kurumu Sözlüğü'nde de sadece "isim" olarak nitelendirilmiş ve küçük harfle yazılmış, temel anlamının gerektirdiği "özel isim" yazım biçimine yer verilmemiştir.
+
+
+== Geçmiş ==
+
+İnternet üzerinden ağ sayesinde iletişim kuran bilgisayar sistemleri olan askerî  iletişim sistemi Semi-Automatic Ground Environment (SAGE) ve ticari hava yolu rezervasyon sistemi olan Semi-Automatic Business Research Environment (SABRE) 1950'lerin başında başlamıştır. 1960^'larda ise the Advanced Research Projects Agency (ARPA), ABD'nin savunma sistemi için the Advanced

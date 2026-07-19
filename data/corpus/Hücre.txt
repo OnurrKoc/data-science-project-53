@@ -1,0 +1,32 @@
+Hücre bir canlının yapısal ve işlevsel özellikler gösterebilen en küçük birimidir. Hücre kelimesi, (İng. Cell); Latince küçük odacık anlamına gelen "cellula" kelimesinden Robert Hooke tarafından türetilmiştir. Hücrenin içerisinde "Solunum, Boşaltım, Beslenme, Sindirim" gibi yaşamsal faaliyetler gerçekleşir.
+
+
+== Tarihçe ==
+
+Robert Hooke, mikroskopla incelemekte olduğu şişe mantar parçasının yan yana dizili bitişik bölümlerden oluştuğunu görmüş. Etrafları çevrili ve içleri boş olan yapılarına uygun olarak bu yapı birimlerine "Hücre" ("Cellula") adını vermiş. Bu ismi 1665 yılında yayınladığı Micrographia adlı kitapta da kullanmıştır.
+Daha sonra 1671 yılında Grew ve 1672 yılında Malpighi, bitkilerde de aynı yapı birimlerinin olduğunu bulmuşlardır. 19. yüzyılın ortalarında "Hücre Kuramı" ortaya atılmıştır. Günümüze dek geliştirilen hücre kuramı (hücrelerin yapısını, özelliklerini, oluşumlarını vb. tanımlayan kuram) biyolojiye büyük ilerlemeler sağlamıştır.
+
+
+== Yapısı ==
+
+Hücreler, Atomların molekülleri, moleküllerin makromolekülleri, makromoleküllerin makromoleküler kompleksleri oluşturmasıyla meydana gelir. Hücreler, çok hücreli organizmalarda (canlılarda) dokuların en küçük yapı taşlarıdır ve yaşamın tüm özelliklerini sergilerler. Genel olarak tüm hücreler temelde aynı yapıya sahiptirler. Fakat bulundukları dokuya ve dolayısıyla fonksiyonlara bağlı olarak bazı özelleşmeler gösterirler. Bitkisel ve hayvansal her organizma, bu temel yapı taşlarından oluşur.
+Hücreler, basit bir tanımla zar içerisindeki sitoplazma ve genetik bilgiyi çevreleyen bir çekirdekten meydana gelir ve ancak mikroskop yardımı ile görülebilirler.
+
+
+== Hücre çeşitleri ==
+
+
+=== Prokaryot (Prokaryotik) hücreler ===
+
+Bakteriler, arkebakteriler ve mavi-yeşil alglerdeki hücre tipleri bu gruba girer. Bunların çekirdek zarı ile çevrili bir çekirdekleri yoktur. Sitoplazmalarında mitokondri, Golgi, Endoplazmik Retikulum gibi zarlı organeller de yoktur. Kalıtım maddesi olan DNA Sitoplazma içerisine dağılmış durumdadır. Organel olduğu bilinen ancak yine de zar taşımayan Ribozomları vardır. Bu tip hücrelerin hayati faaliyetleri Sitoplazmada ve hücre zarında Enzim'ler yardımıyla gerçekleşir. 
+
+
+=== Ökaryot (ökaryotik) hücreler ===
+
+Ökaryotlar (Lat. Eukaryota), "organel zarı" bulunduran organizmaları, dolayısıyla çekirdek materyali hücrenin sitoplazmasına dağılmamış olduğundan da gerçek çekirdeğe sahip organizmaları kapsayan canlı âlemidir. Karyon Latince'de "çekirdek" anlamını verir -eu ön takısı da "gerçek" demektir.
+Kalıtsal materyal, hücre içerisinde belirli bir zarla çevrilmiş çekirdeğin içinde bulunur. Kromozomlar DNA'dan ve proteinden oluşmuş olup, mitozla bölünürler. Ökaryotlar, sitoplazmalarında karmaşık organeller bulundururlar. Ökaryotik hücreler, Prokaryotlara göre çok gelişmişlerdir, hayvanlar, bitkiler, mantarlar ve protistler âlemlerini kapsar.
+
+
+== Hücre zarı (Plazma zarı) ==
+
+Hücreyi dış ortamdan ayıran, seçici geçirgen canlı yapıdır. Hücreyi çevreleyen birim zar ortalama olar

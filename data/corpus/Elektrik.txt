@@ -1,0 +1,20 @@
+Elektrik, elektrik yüklerinin akışına dayanan bir dizi fiziksel olaya verilen isimdir. Elektrik sözcüğü Türkçeye Fransızcadan geçmiştir. Elektriğin Türkçe eş anlamlısı çıngı sözcüğüdür. Ayrıca Anadolu ağızlarında "elektrik" anlamında yaldırayık sözcüğü tespit edilmiştir. Elektrik, pek çok farklı şekillerde var olabilir. Örneğin, yıldırımlar, durgun elektrik, elektromanyetik indüksiyon ve elektrik akımı gibi. Ek olarak, elektriğin elektromanyetik radyasyon, radyo dalgaları gibi oluşumları olduğu bilinmektedir.
+Elektrikte, elektrik yükleri diğerleri ile de etkileşime giren Elektromanyetik alanlar yaratır. Elektrik, pek çok fiziksel durumdan dolayı var olabilir:
+
+Elektrik yükü: Atom altı parçacık, çeşitli elektromanyetik etkileşimlerinden kaynaklanarak ortaya çıkar. Elektriksel olarak yüklenmiş bir madde, elektromanyetik alandan etkilenir.
+Elektrik alan (Elektrostatik): elektrik yükleri tarafından (hareket etmeseler bile) oluşturulan elektromanyetik alanın özel bir şeklidir
+Elektrik potansiyeli: Bir elektrik alanın, elektrik yükü üzerinde yapabildiği iş kapasitesi olarak tanımlanır ve genelde volt olarak ölçülür.
+Elektrik akımı: Elektrikle yüklenmiş parçacıkların hareketi ya da akışı denebilir, genelde amper olarak ölçülür.
+Alternatif akım: Hareket eden parçacıklar manyetik alan oluşturur. Elektrik akımı da manyetik alan yaratabilir ve değişken manyetik alanlar da elektrik akımları oluşturabilir.
+Elektrik mühendisliğinde, elektrik şunlar için kullanılır;
+
+Elektrik gücü: ekipmanlara enerji vermek için kullanılır
+Elektronik: Elektrik devreleri ve aktif elektrikle uğraşır
+Elektrik olayı, antik çağlardan beri araştırılmaktadır, teorik anlaşılması ise yaklaşık on yedinci ve on sekizinci yüzyıla kadar uzamıştır. Hatta bundan sonra bile, pratik uygulamalar çok az miktarda kalmıştır ve elektriğin endüstride ve yaygın kullanımı için uygun hale gelmesi ancak on dokuzuncu yüzyılda olmuştur. Elektriğin akıl almaz bir yaygınlığı vardır yani diğer bir deyişle ulaşım, ısıtma, aydınlatma, iletişim ve teknolojik aletlerde elektrik yaygın olarak kullanılmaktadır. Elektriksel güç ise, şu anda endüstrinin kırılmaz kemiklerinden bir tanesidir.
+
+
+== Tarih ==
+
+Elektriğin var oluşu ile ilgili insanlar en ufak bir bilgi sahibi değilken bile, elektrikli yılan balığının şok etkisinin farkındaydılar. Antik Mısır'da MÖ 2.750 de yazılmış bir yazı bu balığı Nil'in fırtınası olarak tanımlamıştı. Bu balık aynı zamanda diğer balıkların koruyucusu olarak görülüyordu. Elektrikli balıklar, binlerce yıl sonra eski Yunan, Roma ve Arap doğa bilimcileri ve doktorları tarafından yeniden bahsedildi. Yaşlı Plinius ve Scribonius Largus gibi bazı eski yazarlar, elektrikli yayın balığı ve elektrik vatozlarılarının yaptığı elektrik çarpmasının uyuşturucu etkisini doğruladılar ve bu tür şokların iletken nesnelerde ilerleyebileceğini biliyorlardı.
+Gut veya baş ağrısı gibi rahatsızlıkları olan hastalar, güçlü sarsıntının onları iyileştirebileceği umuduyla elektrikli balığa dokunmaya yönlendirildi.
+A

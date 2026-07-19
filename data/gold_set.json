@@ -1,0 +1,137 @@
+[
+  {
+    "soru": "Bitkilerin ışık enerjisini kimyasal enerjiye çevirdiği, oksijen açığa çıkaran işlem nedir?",
+    "dogru_dosya": "Fotosentez.txt",
+    "anahtar_kelime": "klorofil"
+  },
+  {
+    "soru": "Genetik bilgiyi taşıyan, çift sarmal yapıdaki nükleik asit molekülü nedir?",
+    "dogru_dosya": "DNA.txt",
+    "anahtar_kelime": "nükleotit"
+  },
+  {
+    "soru": "Kütleçekimi ışığın bile kaçamayacağı kadar güçlü olan, olay ufkuyla çevrili gök cismi nedir?",
+    "dogru_dosya": "Kara_delik.txt",
+    "anahtar_kelime": "olay ufku"
+  },
+  {
+    "soru": "Güneş ve onun çevresinde dolanan gezegenlerin oluşturduğu, kütleçekimiyle bağlı sisteme ne ad verilir?",
+    "dogru_dosya": "Güneş_Sistemi.txt",
+    "anahtar_kelime": "Kuiper"
+  },
+  {
+    "soru": "Osmanlı Devleti'ni kuran ve ona adını veren hükümdar kimdir?",
+    "dogru_dosya": "Osmanlı_İmparatorluğu.txt",
+    "anahtar_kelime": "Osman Gazi"
+  },
+  {
+    "soru": "Atom altı parçacıkları inceleyen, belirsizlik ilkesini içeren fizik dalı nedir?",
+    "dogru_dosya": "Kuantum_mekaniği.txt",
+    "anahtar_kelime": "Max Planck"
+  },
+  {
+    "soru": "Sinir sisteminin merkezi olan, nöronlardan oluşan ve vücudu yöneten organ hangisidir?",
+    "dogru_dosya": "Beyin.txt",
+    "anahtar_kelime": "nöron"
+  },
+  {
+    "soru": "Elektrik kelimesinin Türkçedeki eş anlamlısı olan sözcük nedir?",
+    "dogru_dosya": "Elektrik.txt",
+    "anahtar_kelime": "çıngı"
+  },
+  {
+    "soru": "İngilizce internet kelimesi hangi terimin kısaltması olarak ortaya çıkmıştır?",
+    "dogru_dosya": "İnternet.txt",
+    "anahtar_kelime": "Interconnected"
+  },
+  {
+    "soru": "Robotların tasarımı, yapımı ve işletimiyle ilgilenen disiplinler arası alan nedir?",
+    "dogru_dosya": "Robotik.txt",
+    "anahtar_kelime": "El-Cezeri"
+  },
+  {
+    "soru": "Bakterilere karşı etkili olan, enfeksiyon tedavisinde kullanılan ilaç türü nedir?",
+    "dogru_dosya": "Antibiyotik.txt",
+    "anahtar_kelime": "Fleming"
+  },
+  {
+    "soru": "Bir hastalığa karşı aktif bağışıklık kazandıran biyolojik preparat nedir?",
+    "dogru_dosya": "Aşı.txt",
+    "anahtar_kelime": "Jenner"
+  },
+  {
+    "soru": "Bal üreten, kovanda toplu hâlde yaşayan böcek türü nedir?",
+    "dogru_dosya": "Bal_arısı.txt",
+    "anahtar_kelime": "mellifera"
+  },
+  {
+    "soru": "Buzulların genişleyip Dünya sıcaklığının uzun süre düştüğü jeolojik döneme ne denir?",
+    "dogru_dosya": "Buzul_çağı.txt",
+    "anahtar_kelime": "Würm"
+  },
+  {
+    "soru": "Dünya'nın deniz seviyesinden en yüksek dağı hangisidir?",
+    "dogru_dosya": "Everest_Dağı.txt",
+    "anahtar_kelime": "Hillary"
+  },
+  {
+    "soru": "Güneş ışınlarından ısı veya elektrik elde etmeye dayanan yenilenebilir enerji kaynağı nedir?",
+    "dogru_dosya": "Güneş_enerjisi.txt",
+    "anahtar_kelime": "füzyon"
+  },
+  {
+    "soru": "Kavrulmuş çekirdeklerinden yapılan, kafein içeren uyarıcı içecek nedir?",
+    "dogru_dosya": "Kahve.txt",
+    "anahtar_kelime": "Kaldi"
+  },
+  {
+    "soru": "Dünya yüzeyinin çoğunu kaplayan, hidrosferin büyük bölümünü oluşturan tuzlu su kütlesi nedir?",
+    "dogru_dosya": "Okyanus.txt",
+    "anahtar_kelime": "hidrosfer"
+  },
+  {
+    "soru": "Kebap ve köftenin öne çıktığı, çorbalarıyla bilinen ulusal mutfak hangisidir?",
+    "dogru_dosya": "Türk_mutfağı.txt",
+    "anahtar_kelime": "mercimek"
+  },
+  {
+    "soru": "Bir yıldızın yörüngesinde dolanan, yörüngesini temizlemiş yuvarlak gök cismine ne denir?",
+    "dogru_dosya": "Gezegen.txt",
+    "anahtar_kelime": "bulutsu"
+  },
+  {
+    "soru": "Gökyüzünde ışık saçan, ağırlıklı olarak hidrojen ve helyumdan oluşan plazma küresi nedir?",
+    "dogru_dosya": "Yıldız.txt",
+    "anahtar_kelime": "süpernova"
+  },
+  {
+    "soru": "Milyarlarca yıldızı kütle çekimiyle bir arada tutan devasa gök sistemine ne denir?",
+    "dogru_dosya": "Galaksi.txt",
+    "anahtar_kelime": "Samanyolu"
+  },
+  {
+    "soru": "Dünya'nın çevresinde dolanan tek doğal uydu hangisidir?",
+    "dogru_dosya": "Ay.txt",
+    "anahtar_kelime": "Theia"
+  },
+  {
+    "soru": "Bir canlının yapısal ve işlevsel özellik gösterebilen en küçük birimi nedir?",
+    "dogru_dosya": "Hücre.txt",
+    "anahtar_kelime": "Hooke"
+  },
+  {
+    "soru": "Konak hücreye girerek çoğalan, hastalıklara yol açan mikroskobik biyolojik etken nedir?",
+    "dogru_dosya": "Virüs.txt",
+    "anahtar_kelime": "kapsid"
+  },
+  {
+    "soru": "Kimyasal tepkimeleri hızlandıran, çoğu protein yapılı biyomoleküllere ne denir?",
+    "dogru_dosya": "Enzim.txt",
+    "anahtar_kelime": "substrat"
+  },
+  {
+    "soru": "Vücudu patojenlere ve tümör hücrelerine karşı koruyan işleyişler bütününe ne ad verilir?",
+    "dogru_dosya": "Bağışıklık_sistemi.txt",
+    "anahtar_kelime": "otoimmün"
+  }
+]
