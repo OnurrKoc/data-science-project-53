@@ -1,113 +1,93 @@
-# DS-53 — Kaynaklı Asistan / RAG Değerlendirme (Bitirme Projesi)
+# BilgiTR — Kaynaklı Soru-Cevap Asistanı (RAG)
 
-**Modül**: Bitirme Projesi (RAG + Değerlendirme) • **Süre**: 4-6 saat
+**Bitirme Projesi · Veri Bilimi** • Tahmini süre: ~6-10 saat • Değerlendirme: **eğitmen incelemesi (manuel)**
 
-## 🎯 Proje Senaryosu
+---
 
-27 gerçek Türkçe Wikipedia makalesinden (Fotosentez, DNA, Kara delik, Osmanlı
-İmparatorluğu, Gezegen, Yıldız, İnternet, Antibiyotik, Kahve, Everest Dağı...
-toplam ~10000 kelime) oluşan bir doküman korpusu üzerinde uçtan uca bir
-**Kaynaklı Asistan (RAG)** kuruyorsun: kullanıcı doğal dille bir soru soruyor,
-sistem korpustan ilgili parçaları getirip kaynak göstererek cevap üretiyor.
+## 📨 Durum
 
-Daha önceki RAG projelerinde (DS-49, DS-50, DS-51) küçük kurgusal metinler ve
-mock (sahte) embedding kullandın. **Bu projede fark şu:**
+BilgiTR'de **data scientist** olarak çalışıyorsun. Elinizde bir doküman arşivi var (27 Türkçe bilgi makalesi). Ürün ekibinden şu istek geliyor:
 
-1. **Gerçek, büyük korpus** — 27 gerçek Wikipedia makalesi, kurgusal değil.
-   Bazıları konu olarak yakın (astronomi: Güneş Sistemi/Gezegen/Yıldız/Galaksi;
-   biyoloji: DNA/Hücre/Virüs/Enzim) — retrieval'ı zorlar, ölçüm anlamlı olur.
-2. **Gerçek retrieval** — `TfidfVectorizer` (scikit-learn) + cosine similarity
-   ile GERÇEK bir vektör uzayında arama yapıyorsun. Mock embed YOK.
-3. **Ölçüm + karşılaştırma odaklı** — Sadece "kur"muyorsun; retrieval
-   kalitesini bir **gold set** üzerinde ölçüyor (hit-rate), farklı **chunk
-   boyutlarını karşılaştırıyorsun (ablation)**. Bu, modül projelerinde YOK —
-   bitirme projesinin ayırt edici noktası.
-4. **Mock-LLM sadece cevap üretiminde** — retrieval matematiği tamamen
-   gerçek; sadece son adımdaki LLM çağrısı (metin üretimi) test edilebilir
-   olması için mock'lanır (dependency injection deseni).
+> "Kullanıcılarımız arşivimizdeki bilgilere doğal dille soru sorabilsin istiyoruz: soruyu yazsınlar, sistem arşivden doğru bilgiyi bulup **kaynağını göstererek** cevaplasın. Ama dikkat: bana 'yaptım, çalışıyor' demen yetmez. Bu tür sistemler bazen alakasız doküman getirir. Senden **ne kadar doğru çalıştığını sayıyla kanıtlamanı** ve tasarım tercihlerini **ölçerek** savunmanı istiyorum."
 
-## 🧩 Kuracağın Hat
+Bu senin **bitirme projen**. Sana adım adım talimat vermiyoruz — bir RAG (Retrieval-Augmented Generation, getirim-destekli üretim) sistemini nasıl kuracağın ve **nasıl ölçeceğin** sana kalmış.
 
-1. `load_corpus` — `data/corpus/` altındaki 27 .txt dosyasını yükle
-2. `chunk_text` / `build_chunks` — kelime bazlı, overlap'li parçalama; her
-   parçaya kaynağını (dosya adı) ekle
-3. `build_index` — tüm parçaları `TfidfVectorizer` ile vektörleştir
-4. `retrieve` — soruyu vektörleştir, cosine similarity ile en yakın k parçayı
-   getir
-5. `generate_answer` — getirilen parçalardan bir prompt kur, mock LLM ile
-   cevap üret, kaynakları (citation) döndür
-6. `evaluate_hit_rate` — bir **gold set** (`data/gold_set.json`) üzerinde
-   retrieval'ın doğru dokümanı getirip getirmediğini ölç
-7. `compare_chunk_sizes` — **ablation**: 30/80/300 kelimelik chunk
-   boyutlarını dene, her biri için hit-rate hesapla, karşılaştır
-8. `run_pipeline` — tüm hattı uçtan uca çalıştır
+## 🎯 İş hedefi
 
-## 📏 Neden Ölçüyoruz? (önemli)
+Kullanıcı bir soru sorunca, doküman arşivinden **ilgili parçaları bulup kaynak göstererek** cevaplayan bir asistan kur. Ve — en önemlisi — bu sistemin **retrieval (bilgi getirme) kalitesini ölç ve raporla**.
 
-Bir RAG sisteminin "iyi çalıştığını" söylemek yetmez — **sayı vermen**
-gerekir. `gold_set.json`, gerçek korpus içeriğine göre yazılmış 27 soru-cevap
-çifti içerir: her biri bir soru, doğru kaynağı (`dogru_dosya`) ve cevapta
-geçmesi beklenen bir anahtar kelime (`anahtar_kelime`, citation/faithfulness
-kontrolü için).
+## 📦 Elindeki veri
 
-**Hit-rate**: her soru için `retrieve` çalıştırıp, doğru dosyanın getirilen
-ilk k sonuç içinde olup olmadığına bakarsın. Oran, sistemin ne kadar doğru
-kaynağı bulduğunu gösterir (0-1 arası).
+- `data/corpus/` — 27 Türkçe makale (`.txt`); dosya adı konuyu verir (ör. `Fotosentez.txt`).
+- `data/gold_set.json` — 27 soru; her biri için **doğru kaynak dosya** ve cevapta geçmesi beklenen bir **anahtar kelime**. Bunu "ürün ekibinin sana verdiği test soruları" gibi düşün — sistemini bununla ölçeceksin.
+- `data/veri_sozlugu.md` — veri ve gold set formatının açıklaması.
 
-**Chunk boyutu karşılaştırması (ablation)**: chunk ne kadar büyük/küçük
-olmalı? Küçük chunk'lar daha odaklı ama bağlamdan yoksun olabilir; büyük
-chunk'lar daha fazla bağlam taşır ama alakasız bilgiyle "sulanabilir". Bunu
-tahmin etmek yerine 3 farklı boyutu (30, 80, 300 kelime) deneyip hit-rate'i
-ÖLÇEREK karşılaştırırsın — bu, bitirme projesinde sana "kur"maktan bir adım
-öteye, gerçek bir RAG mühendisinin yaptığı **değerlendir + karşılaştır +
-raporla** işine geçiriyor. (İpucu: k=1 ile küçük chunk'ların büyüklere göre
-neden daha iyi sonuç verebildiğini raporunda tartış.)
+⚠️ Arşivde konu olarak yakın makaleler var (astronomi: Güneş Sistemi / Gezegen / Yıldız / Galaksi; biyoloji: DNA / Hücre / Virüs / Enzim). Bunlar kelime paylaştığı için retrieval'ı zorlar — ölçüm bu yüzden anlamlı.
 
-## 🔌 llm Nasıl Çalışıyor? (önemli)
-
-`generate_answer` fonksiyonunun `llm`'i **parametre olarak alır**
-(dependency injection):
-
-- **`llm`**: prompt (str) → cevap (str). Gerçekte bir LLM sağlayıcısının
-  API çağrısı olur.
-- **Testlerde** deterministik sahte bir `llm` fonksiyonu verilir → API key
-  GEREKMEZ, cevap her zaman aynı.
-- Retrieval (adım 3-5) tamamen GERÇEK — sadece son adımdaki metin üretimi
-  mock'lanır.
-
-Aynı kod, sadece verdiğin fonksiyon değişir — test edilebilir RAG kodu
-yazmanın profesyonel yolu budur.
-
-## 📦 Kurulum
+## 🛠️ Başlarken
 
 ```bash
+git clone <senin-fork-url>
+cd data-science-project-53
+
 python -m venv venv
 source venv/bin/activate        # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
-python watch.py                 # otomatik test (dosya değişince)
-# veya
-pytest tests/test_question.py -v
+jupyter lab                     # veya: jupyter notebook
 ```
 
-## 🔑 Kaizu Bağlantısı — `kaizu_config.py`
+## ✅ Bizden beklentiler
 
-`USER_ID`'ni Kaizu profilinden alıp yaz (`PROJECT_ID`'ye dokunma). Testler
-geçince skor otomatik gider.
+**Nasıl** çözeceğin serbest (hangi kütüphane, hangi retrieval yöntemi — TF-IDF, embedding, ne istersen). Ama iyi bir teslimatta şunları görmek istiyoruz:
 
-## 🔑 API key? (opsiyonel)
+1. **Retrieval hattı kur** — dokümanları parçalara (chunk) böl, indeksle, bir soruya en ilgili parçaları getir.
+2. **Kaynak göster (citation)** — cevabın hangi doküman(lar)dan geldiğini döndür. Kaynaksız cevap bu projede eksik sayılır.
+3. **Ölç** — `gold_set.json` üzerinde retrieval kalitesini bir metrikle raporla (ör. **hit-rate**: doğru kaynak, getirilen ilk *k* sonuç içinde mi). Sayı ver.
+4. **Karşılaştır (en az bir tasarım kararı)** — parça boyutu, getirilen sonuç sayısı *k*, ya da yöntem gibi bir tercihi değiştir ve etkisini **sayıyla** göster (ablation). **Neden** öyle çıktığını yorumla — bu projenin özü "kur"maktan çok "kur + ölç + karşılaştır".
+5. **(Opsiyonel) Cevap üret** — getirilen parçalardan bir cevap oluştur. Gerçek bir LLM **gerekmez**: API key istemeyen basit/mock bir üretici yeterli. İstersen `.env.example`'ı kullanıp kendi anahtarınla gerçek LLM de deneyebilirsin (odak retrieval + ölçüm).
 
-Puanlama için **gerekmez** (mock LLM). Gerçek bir LLM ile denemek istersen
-`cp .env.example .env` + kendi anahtarını koy (`.env` asla commit edilmez).
+## 📤 Teslim edeceklerin
 
-## 💡 İpuçları
+| Dosya | Ne olmalı |
+|---|---|
+| `analiz.ipynb` | Uçtan uca defterin: korpusu yükleme → parçalama → indeksleme → getirme → ölçüm → karşılaştırma, kararlarını **anlatarak**. |
+| `rag.py` | Yeniden çalıştırılabilir script: korpusu indeksler, `gold_set` üzerinde metriği hesaplayıp ekrana basar. (Biz `python rag.py` diyip çalıştırabilmeliyiz.) — yani notebook'ta kurduğun hattın temiz, tek komutla çalışan hali. |
+| `RAPOR.md` | İş diliyle raporun (`RAPOR_SABLONU.md`'yi doldur). |
 
-- `chunk_text`'te sonsuz döngüye düşmemek için ilerleme adımını
-  `max(1, chunk_size - overlap)` şeklinde hesapla.
-- `retrieve`'de `cosine_similarity` çıktısı bir matris döner (1×N) — ilk
-  satırı al, sonra `argsort()[::-1][:k]` ile en yüksek k indeksi bul.
-- `evaluate_hit_rate` ve `compare_chunk_sizes` birbirini kullanabilir —
-  `compare_chunk_sizes` her boyut için yeniden `build_chunks` + `build_index`
-  + `evaluate_hit_rate` çağırır.
-- Sonuçları yorumlarken tek bir sayıya değil, **hangi chunk boyutunun neden**
-  daha iyi/kötü çalıştığına da bakmaya çalış (raporunda bunu tartış).
+## 🧭 Nasıl değerlendirilecek
+
+Otomatik test yok — bir eğitmen aşağıdaki rubriğe göre değerlendirecek:
+
+| Boyut | Puan |
+|---|---:|
+| Retrieval hattı & kaynak gösterimi (citation) | 25 |
+| Ölçüm & metrik doğruluğu (gold set üzerinde) | 25 |
+| Karşılaştırma / ablation & yorumu | 20 |
+| Veri işleme & parçalama (chunking) | 10 |
+| Rapor & iş içgörüsü | 15 |
+| Kod kalitesi & tekrar çalıştırılabilirlik (`rag.py`) | 5 |
+| **Toplam** | **100** |
+
+Geçmek için ~70/100 hedefle. **Puanın çoğu bir RAG kurmakta değil; onu ölçmen ve tasarım kararlarını sayıyla savunmanda.**
+
+## 📈 Başarı hedefi
+
+Katı bir eşik yok. `gold_set` üzerinde **anlamlı bir hit-rate** hedefle (yön verelim: iyi bir çözüm ~0.7 ve üzerini yakalar). Ama asıl değerlendirilen: sonucu **nasıl ölçtüğün** ve karşılaştırmandan **ne çıkardığın**.
+
+## 🚀 Nasıl gönderirsin
+
+1. Repoyu **fork'la**, çöz, repo'nu **public** bırak.
+2. Kaizu'da bu projede **"İncelet 🔍"** butonuna bas.
+3. **GitHub repo linkini** ve **neler yaptığını** (yaklaşımın, ölçüm sonuçların, bakmamızı istediğin yerler) yaz, gönder.
+4. Eğitmenin inceleyecek — yanıt **2-3 iş günü** sürebilir; sonucu Kaizu'da göreceksin. Takılırsan eğitmenine danışabilirsin.
+
+> Not: Bu projenin onayı, sıradaki bitirme projeni açar.
+
+## 💡 Hatırlatmalar
+
+- Cevap üretimi için **API key şart değil** — puanlama retrieval + ölçüm üzerinden.
+- Kütüphane seçimi sana ait; `requirements.txt` bir başlangıç seti.
+- Amaç kusursuz bir sistem değil; **ölçen ve kararını savunan** bir mühendis gibi çalışman.
+
+Başarılar 🚀

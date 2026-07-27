@@ -5,6 +5,11 @@ __pycache__/
 .pytest_cache/
 *.egg-info/
 
+# Notebook / model çıktıları
+.ipynb_checkpoints/
+*.joblib
+*.h5
+
 # Virtual environments
 venv/
 env/
@@ -17,8 +22,9 @@ env/
 .DS_Store
 
 # Ortam değişkenleri
+.env
 .env.*
 !.env.example
 
-# Çözüm — repo'ya GİTMEZ (Kaizu DB'de saklanır)
+# Çözüm — repo'ya GİTMEZ
 _solution/
